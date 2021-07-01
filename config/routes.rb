@@ -1,3 +1,7 @@
 Rails.application.routes.draw do
-  resource :articles
+  
+  resource :contacts, only: [:new, :create], path_names: {:new => ''} 
+
+  resources :articles
+  
 end
