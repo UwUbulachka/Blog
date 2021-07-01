@@ -1,0 +1,19 @@
+<h1> Новая статья </h1>
+
+<%= form_for :article, url: articles_path do |f| %>
+
+	<p>
+		<%= f.label :title %>
+		<%= f.text_field :title %>
+	</p>
+	
+	<p>
+		<%= f.label :text %>
+		<%= f.text_field :text %>
+	</p>
+
+	<p>
+		<%= f.submit %>
+	</p>
+	
+<% end %>
