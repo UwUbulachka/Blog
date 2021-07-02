@@ -1,0 +1,7 @@
+<% @articles.each do |article| %>
+<h1><%= article.title %></h1>
+<p><%= article.text %></p>
+
+<p><%= link_to "Показать", article_path(article) %> | <%= link_to "Редактировать", edit_article_path(article) %><p>	
+<hr>
+<% end %>
