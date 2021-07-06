@@ -11,6 +11,8 @@
 
 <p><strong>Name: </strong><%= current_user.username %></p>
 <%= comment.body %></p>
+
+<%= link_to "Удалить", article_comment_path(comment.article, comment), method: :delete %>
 <hr>
 
 <% end %>
@@ -18,7 +20,6 @@
 <p>
 <%= form_for([@article, @article.comments.build]) do |f| %>
 
-  
   <p>
     <%= f.label :body %><br/>
     <%= f.text_area :body %>
