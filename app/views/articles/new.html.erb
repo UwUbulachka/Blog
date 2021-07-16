@@ -1,19 +1,31 @@
-<h1> Новая статья </h1>
+<div class="container">
+<div class="row">
+<div class="col-6 col-md-4"></div>
+
+<div class="col-6 col-md-4">
+
+	<h1> Новая статья </h1>
 
 <%= form_for :article, url: articles_path do |f| %>
-
-	<p>
-		<%= f.label :title %>
-		<%= f.text_field :title %>
-	</p>
 	
-	<p>
-		<%= f.label :text %>
-		<%= f.text_field :text %>
-	</p>
+
+<div class="mb-3">
+    <%= f.text_field :title, placeholder: "Заголовок", for: 'exampleDropdownFormEmail2', class: 'form-label form-control' %>
+</div>	
+	
+<div class="mb-3">
+    <%= f.text_field :text, placeholder: "Текст", for: 'exampleDropdownFormEmail2', class: 'form-label form-control' %>
+</div>	
 
 	<p>
-		<%= f.submit %>
+	<%= f.submit :Submit, class: 'btn btn-success' %>
 	</p>
 	
 <% end %>
+
+</div>
+
+    
+<div class="col-6 col-md-4"></div>
+</div>
+
