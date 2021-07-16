@@ -1,24 +1,26 @@
 <div class="container">
 <div class="row">
-<div class="col-6 col-md-4"></div>
+<div class="col-5 col-md-3"></div>
 
-<div class="col-6 col-md-4">
 
-	<h1> Новая статья </h1>
+<div class="col-7 col-md-5">
+<div class="ots_btn">	
+
+	<h1> Новая статья </h1><br/>
 
 <%= form_for :article, url: articles_path do |f| %>
 	
 
 <div class="mb-3">
-    <%= f.text_field :title, placeholder: "Заголовок", for: 'exampleDropdownFormEmail2', class: 'form-label form-control' %>
-</div>	
+    <%= f.text_field :title, placeholder: 'Заголовок', for: 'exampleDropdownFormEmail2', class: 'form-label form-control w-50 p-2' %>
+</div>
 	
 <div class="mb-3">
-    <%= f.text_field :text, placeholder: "Текст", for: 'exampleDropdownFormEmail2', class: 'form-label form-control' %>
-</div>	
+    <%= f.text_field :text, for: 'exampleDropdownFormEmail2', class: 'form-label form-control w-90 p-4' %>
+</div>
 
 	<p>
-	<%= f.submit :Submit, class: 'btn btn-success' %>
+	<%= f.submit :Submit, class: 'btn btn-warning btn-lg' %>
 	</p>
 	
 <% end %>
@@ -26,6 +28,7 @@
 </div>
 
     
-<div class="col-6 col-md-4"></div>
+<div class="col-5 col-md-3"></div>
 </div>
 
+</div>
