@@ -19,6 +19,14 @@
   border: 3px solid red;
 }
 
-.ots { 
+.ots_btn { 
   margin-top: 17%
+  }
+
+.ots { 
+  margin-top: 20%
+  }
+
+.f {
+    font-family: "Monotype Corsiva" Cursive;
   }

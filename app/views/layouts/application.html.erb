@@ -40,7 +40,7 @@
         <div class="text-end">
          <p>  
         <% if user_signed_in? %>
-          <%= link_to "Выйти", destroy_user_session_path, method: :delete, type: "button", class: "btn btn-outline-light me-2 ots" %>
+          <%= link_to "Выйти", destroy_user_session_path, method: :delete, type: "button", class: "btn btn-warning btn-lg me-2 ots_btn" %>
         <% else %>
           <%= link_to "Войти", new_user_session_path, type: "button", class: "btn btn-warning"  %>
         <% end %>  
