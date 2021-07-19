@@ -33,3 +33,16 @@
 
 .a { text-decoration: none; color: grey; }
 a:hover { text-decoration: none; color: black; }
+
+
+hr {
+  width: 330px;
+  /* установим высоту контейнера */
+  height: 5px;
+  /* границы уберем */
+  border: 0;
+  /* установим нужный цвет, например, красный */
+  color: grey;
+}
+
+.center { text-align: center; }
