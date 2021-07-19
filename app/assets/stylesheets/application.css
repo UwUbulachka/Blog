@@ -31,3 +31,5 @@
    font-family: Courier, monospace; 
    } 
 
+.a { text-decoration: none; color: grey; }
+a:hover { text-decoration: none; color: black; }
