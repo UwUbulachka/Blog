@@ -3,15 +3,18 @@
 
 <div class="col-6 col-md-2"></div>
 
-<div class="col-6 col-md-8">
+<div class="col-6 col-md-8 ">
+<div class="layer1">	
 <% @articles.each do |article| %>
 	<h1><%= article.title %></h1>
 	<p><%= article.text %></p>
 
-	<p><%= link_to "Показать", article_path(article), class: "a layer1" %> | <%= link_to "Редактировать", edit_article_path(article), class: "a layer1" %> | <%= link_to "Удалить", article_path(article), method: :delete, data: {confirm: 'Действительно удалить?' }, class: "a layer1" %> <p>	
+
+	<p><%= link_to "Показать", article_path(article), class: "a" %> | <%= link_to "Редактировать", edit_article_path(article), class: "a" %> | <%= link_to "Удалить", article_path(article), method: :delete, data: {confirm: 'Действительно удалить?' }, class: "a" %> <p>	
 
 <hr>
 <% end %>
+</div>
 </div>
 
 <div class="col-6 col-md-2"></div>
