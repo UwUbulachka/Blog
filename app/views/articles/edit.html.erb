@@ -1,18 +1,39 @@
-<h1> Редактировать статью </h1>
+<div class="container">
+<div class="row">
+<div class="col-5 col-md-3"></div>
 
+
+<div class="col-7 col-md-5">
+<div class="ots_btn">	
+
+	<div class="layer1">
+		<h1> Новая статья </h1><br/>
+	</div>
 <%= form_for :article, url: article_path(@article), method: :patch do |f| %>
-	<p>
-		<%= f.label :title %>
-		<%= f.text_field :title %>
-	</p>
 	
-	<p>
-		<%= f.label :text %>
-		<%= f.text_field :text %>
-	</p>
+
+<div class="mb-3">
+<div class="layer1"> 
+    <%= f.text_field :title, placeholder: 'Заголовок', for: 'exampleDropdownFormEmail2', class: 'form-label form-control w-50 p-2' %>
+</div>
+</div> 	
+
+<div class="mb-3"> 
+<div class="layer1"> 
+    <%= f.text_area :text, placeholder: 'Текст', for: 'exampleDropdownFormEmail2', class: 'form-label form-control w-90 p-4' %>
+</div> 
+</div>
 
 	<p>
-		<%= f.submit %>
+	<button type="button f.submit" class="btn btn-warning btn-lg">Отправить</button>
 	</p>
 	
 <% end %>
+
+</div>
+
+    
+<div class="col-5 col-md-3"></div>
+</div>
+
+</div>
