@@ -1,7 +1,21 @@
-<% @articles.each do |article| %>
-<h1><%= article.title %></h1>
-<p><%= article.text %></p>
+<div class="container">
+<div class="row">
 
-<p><%= link_to "Показать", article_path(article) %> | <%= link_to "Редактировать", edit_article_path(article) %> | <%= link_to "Удалить", article_path(article), method: :delete, data: {confirm: 'Действительно удалить?' } %> <p>	
+<div class="col-6 col-md-2"></div>
+
+<div class="col-6 col-md-8">
+<% @articles.each do |article| %>
+	<h1><%= article.title %></h1>
+	<p><%= article.text %></p>
+
+	<p><%= link_to "Показать", article_path(article), class: "a layer1" %> | <%= link_to "Редактировать", edit_article_path(article), class: "a layer1" %> | <%= link_to "Удалить", article_path(article), method: :delete, data: {confirm: 'Действительно удалить?' }, class: "a layer1" %> <p>	
+
 <hr>
 <% end %>
+</div>
+
+<div class="col-6 col-md-2"></div>
+
+</div>	
+</div>
+
