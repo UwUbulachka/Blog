@@ -1,16 +1,40 @@
-<h2>Forgot your password?</h2>
+<div class="container">
+<div class="row">
+<div class="col-5 col-md-3"></div>
 
-<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
+<div class="col-7 col-md-5">
+<div class="ots_btn"> 
 
-  <div class="actions">
-    <%= f.submit "Send me reset password instructions" %>
-  </div>
-<% end %>
+  <div class="layer1">
+    <h1>Забыли ваш пароль?</h1><br>
 
-<%= render "devise/shared/links" %>
+    <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+    <%= render "devise/shared/error_messages", resource: resource %>
+      
+
+      
+      <div class="mb-3">
+      <div class="layer1"> 
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: 'email', for: 'exampleDropdownFormEmail2', class: 'form-label form-control w-60 p-2' %>
+      </div>
+      </div>
+
+      <div class="actions ot"> 
+        <button type="button f.submit" class="btn btn-warning btn-lg">Отправить</button>
+      </div>
+    <% end %>
+
+     <div class=" ot"> 
+       <a><%= link_to "Зарегистрироваться", new_user_registration_path, class: "a" %></a><br>
+       <a><%= link_to "Войти", user_session_path, class: "a" %></a>
+    </div>
+
+</div>
+
+    
+<div class="col-5 col-md-3"></div>
+</div>
+
+
+
