@@ -44,7 +44,7 @@
         <% if user_signed_in? %>
           <%= link_to "Выйти", destroy_user_session_path, method: :delete, type: "button", class: "btn btn-warning btn-lg me-2 ots_btn layer1" %>
         <% else %>
-          <%= link_to "Войти", new_user_session_path, type: "button", class: "btn btn-warning layer1"  %>
+          <%= link_to "Войти", new_user_session_path, type: "button", class: "btn btn-warning btn-lg me-2 ots_btn layer1"  %>
         <% end %>  
        </p>
         </div>
