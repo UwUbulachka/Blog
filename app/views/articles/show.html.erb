@@ -1,31 +1,52 @@
-<h1><%= @article.title %></h1>
+<div class="container">
+  <div class="row">
 
-<p><%= @article.text %></p>
+  <div class="col-6 col-md-2"></div>
+
+    <div class="col-6 col-md-8">
+      <div class="layer1">  
+      <h1><%= @article.title %></h1>
+      <p><%= @article.text %></p>
+      <hr>
 
 
-<h1>Комментарии: </h1>
 
-<%= 'Без коментариев' if @article.comments.empty? %>
+      <h5>Комментарии:</h5>
+        <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+          <div class="col p-4 d-flex flex-column position-static">
 
-<% @article.comments.each do |comment|%>
 
-<p><strong>Name: </strong><%= current_user.username %></p>
-<%= comment.body %></p>
+          <% @article.comments.each do |comment|%> <!-- для каждого комментария -->
 
-<%= link_to "Удалить", article_comment_path(comment.article, comment), method: :delete %>
-<hr>
+            <p><strong>Name: </strong><%= current_user.username %></p> <!-- Вывод имени -->
+            <%= comment.body %></p><!-- Вывод каждого комментария -->
 
-<% end %>
+            <%= link_to "Удалить", article_comment_path(comment.article, comment), method: :delete, class: "a" %> <!-- для каждого комментария удалить -->
+          <hr>
+          <% end %> 
 
-<p>
-<%= form_for([@article, @article.comments.build]) do |f| %>
+          <%= 'Без коментариев' if @article.comments.empty? %> <!-- Без комментариев если коменнтарий есть то выводи -->
 
-  <p>
-    <%= f.label :body %><br/>
-    <%= f.text_area :body %>
-  </p>
+           <h5>Прокомментировать:</h5>
+           <%= form_for([@article, @article.comments.build]) do |f| %> <!-- форма для комментария -->
 
-  <p><%= f.submit %></p>
+              <p>
+                <%= f.text_area :body %> 
+              </p>
 
-<% end %>
-</p>
+              <p>
+                <button type="button f.submit" class="btn btn-warning btn-small">Отправить</button>
+              </p>
+
+          <% end %>
+          <hr>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  <div class="col-6 col-md-2"></div>
+
+  </div>  
+</div>
